@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>For applicants</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,18 +20,42 @@
             display: flex;
             justify-content: center;
             
-            background-position: center center;
             background-image: url("src/bg.png");
+            background: hsl(245,88.3,40.2);
+            background: linear-gradient(27deg, rgba(26,12,193,0.865983893557423) 0%,
+                                             rgba(16,77,175,0.8995973389355743) 20%,
+                                              rgba(14,106,193,0.5382528011204482) 50%,
+                                               rgba(4,121,195,0.6783088235294117) 80%,
+                                                rgba(0,159,255,1) 100%);
+            
+            background-position: center center;
+            
             background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: rgb(167, 41, 41);
-        }
+            background-attachment: fixed;            
         
+        }
+
         
         #Header{
-            
+            min-height: 30vh;
+
+            background: url("src/headermain.png"),transparent;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%;
         }
-        
+        #header-title{
+            display: flex;
+            justify-content: center;
+
+            font-size: 7vw;
+            font-family: monospace;
+            font-style: italic;
+            background: -webkit-linear-gradient(#b3b2b2, #555555);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         #ListOfUniversities{
             display: flex;
             flex-direction: column;
@@ -44,14 +68,40 @@
         }
         .list-group-item{
             font-style: italic;
-            color:rgb(0, 0, 0);
+            color:hsl(0, 100%, 100%);
         }
+        #SDU{
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/uni/sdubg.jpg");
+            background-size: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        #AITU{
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/uni/aitubg.jpeg");
+            background-size: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        #KBTU{
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/uni/kbtubg.jpg");
+            background-size: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        #IITU{
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/uni/iitubg.jpg");
+            background-size: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .imgbox{
+            border-radius: 7px;
+            background-color: white;
+        }
+
     @media screen and (min-width: 300px){
         #Content{
             width: 90vw;
-            height: 300vh;
-            background-color: hsla(209, 100%, 38%,50%);
-
             display: flex;
             flex-direction: column;
         }
@@ -73,24 +123,42 @@
           width: auto;
           height: 90vh;
           margin: 5%;
-          background-color: #ffffff;
+          
           
           display: flex;
           flex-direction: column;
         }
         .list-group{
             height: 65vh;
+           
         }
         .textbox{
+            color: white;
             font-size: 5vw;
             display: flex;
             flex-direction: column;
         }
-        #IITU .list-group-item{
-            height: 11%;
+        .KBTU-list, .IITU-list{
+            overflow: scroll;
+        }
+        
+        #AITU, #IITU {
+            background-size: 250vw;
+        }
+        #SDU{
+            background-size: 250vw;
+        }
+        #KBTU{
+            background-size: 300vw;
         }
     }
     @media  screen and (min-width: 640px) {
+        #Header{
+            min-height: 60vh;
+        }
+        #header-title{
+            margin-top: 10vh;
+        }
         .ulogo{
             margin: 0% 25%;
             border-radius: 7px;
@@ -117,32 +185,36 @@
             height: 55vh;
 
             margin: 5%;
-            background-color: rgba(255, 255, 255, 0.945);
+            
         }
         .list-group{
             height: 35vh;
+            
         }
         .list-group-item{
-            height: 23%;
+            height: 25%;
         }
         .textbox{
+            color: hsla(0, 100%, 100%, 0.9);
             font-size: 2vw;
             display: flex;
             justify-content: start;
             flex-direction: column;
         }
-        #IITU .list-group{
-            overflow: scroll;
-        }
-        #IITU .list-group-item{
-            height: 25%;
+        
+        #KBTU, #AITU, #IITU, #SDU {
+            background-size: 150vw;
         }
     }
     @media screen and (min-width: 1000px){
+        #Header{
+            font-size: 2vh;
+            margin-bottom: 2vh;
+        }   
         #Content{
             width: 70vw;
             height: 300vh;
-            background-color: hsla(209, 100%, 38%,50%);
+            
 
             display: flex;
             flex-direction: column;
@@ -171,9 +243,10 @@
             border-radius: 7px;            
             height: 40vh;
             margin: 5vh;
-            background-color: rgba(255, 255, 255, 0.945);
+            
         }
         .textbox{
+            color: white;
             font-size: 0.9vw;
             display: flex;
             justify-content: start;
@@ -188,10 +261,16 @@
         #IITU .list-group-item{
             height: 11%;
         }
+        #KBTU .list-group-item{
+            height: 11%
+        }
+        #KBTU, #AITU, #IITU, #SDU {
+            background-size: 100%;
+        }
     }
   
-    #Tables{
-
+    .table-scroll{
+        overflow:scroll;
     }
     </style>
   </head>
@@ -199,148 +278,312 @@
     <div id="Main">
       <div id="Content">
         <div id="Header">
-            <div style="text-align: left;">
-                <p>Title</p>
-            </div>
-            <div style="height:200px"></div>
-            <div style="text-align: right;">
-                <p>Some text</p>
-            </div>
+            
         </div>
+        <div id="header-title">
+            <p>Choose your future</p>
+        </div>
+        
         <div id="ListOfUniversities" class="container-fluid">
-            <a href="https://sdu.edu.kz/ru/suleyman-demirel-university-ru/" class="row element">
+            <a href="sdu.html" class="btn row element" id="SDU">
                 <div class="imgbox">
                     <img src="src/uni/SDUlogo.jpg" alt="sdulogo" class="ulogo img-fluid" width="500" height="500">
                 </div>
                 <div class="col">
                     <div class="textbox">
                         <div>
-                            <h4>Faculties</h4>
+                            <h5>Faculties</h5>
                         </div>
                         <div>
-                            <div class="list-group">
-                                <div class="list-group-item">
-                                    <p>Faculty of Education and Humanities</p>
+                            <div class="list-group bg-transparent">
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Faculty of Education and Humanities</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>SDU Business school</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>SDU Business school</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>Faculty of Law and Social Sciences</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Faculty of Law and Social Sciences</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>Faculty of Engineering and Natural sciences</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Faculty of Engineering and Natural sciences</strong></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="https://astanait.edu.kz/en/about-2/" class="row element">
+            <a href="aitu.html" class="btn row element" id="AITU">
                 <div class="imgbox">
                     <img src="src/uni/AITUlogo.png" alt="aitulogo" class="ulogo img-fluid" width="500" height="500">
                 </div>
                 <div class="col">
                     <div class="textbox">
                         <div>
-                            <h4>Career path</h4>
+                            <h5>Career path</h5>
                         </div>
                     
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <p>Computer Science</p>
+                        <div class="list-group  bg-transparent">
+                            <div class="list-group-item bg-transparent">
+                                <p><strong>Computer Science</strong></p>
                             </div>
-                            <div class="list-group-item">
-                                <p>Software Engineering</p>
+                            <div class="list-group-item bg-transparent">
+                                <p><strong>Engineering</strong></p>
                             </div>
-                            <div class="list-group-item">
-                                <p>Big Data Analysis</p>
+                            <div class="list-group-item bg-transparent">
+                                <p><strong>Big Data Analysis</strong></p>
                             </div>
-                            <div class="list-group-item">
-                                <p>Industrial Automation</p>
+                            <div class="list-group-item bg-transparent">
+                                <p><strong>Industrial Automation</strong></p>
                             </div>
-                            <div class="list-group-item">
-                                <p>Media Technologies</p>
+                            <div class="list-group-item bg-transparent">
+                                <p><strong>Media Technologies</strong></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="mainpage.html" class="row element" id="IITU">
+            <a href="IITU.html" class="btn row element" id="IITU">
                 <div class="imgbox">
                     <img src="src/uni/IITUlogo.jpg" alt="iitulogo" class="ulogo img-fluid" width="500" height="500">
                 </div>
                 <div class="col">
                     <div class="textbox">
                         <div>
-                            <h4>Career path</h4>
+                            <h5>Career path</h5>
+                        </div>
+                            <div class="list-group IITU-list bg-transparent">
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Information Systems</strong></p>
+                                </div>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Computer Science and Software Engineering</strong></p>
+                                </div>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Computer Science</strong></p>
+                                </div>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Management in IT</strong></p>
+                                </div>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Finance in IT</strong></p>
+                                </div>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Electronic Journalism</strong></p>
+                                </div>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Radio Engineering, Electronics and Telecommunications</strong></p>
+                                </div>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Mathematical and Computer Modeling</strong></p>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </a>
+            <a href="kbtu.html" class="btn row element" id="KBTU">
+                <div class="imgbox">
+                    <img src="src/uni/KBTUlogo.jpeg" alt="kbtulogo" class="ulogo img-fluid" width="500" height="500">
+                </div>
+                <div class="col">
+                    <div class="textbox">
+                        <div>
+                            <h5>Faculties</h5>
                         </div>
                         <div>
-                            <div class="list-group">
-                                <div class="list-group-item">
-                                    <p>Information Systems</p></div>
-                                <div class="list-group-item">
-                                    <p>Computer Science and Software Engineering</p>
+                            <div class="list-group KBTU-list bg-transparent">
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Faculty of Energy and Oil and Gas</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>Computer Science</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Faculty of Geology and Exploration</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>Management in IT</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Faculty of Information Technologies (FIT)</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>Finance in IT</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>The Center of Chemical Engineering</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>Electronic Journalism</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>International School of Economics (ISE)</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>Radio Engineering, Electronics and Telecommunications</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>KBS Business School</strong></p>
                                 </div>
-                                <div class="list-group-item">
-                                    <p>Mathematical and Computer Modeling</p>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>School of Mathematics and Cybernetics</strong></p>
+                                </div>
+                                <div class="list-group-item bg-transparent">
+                                    <p><strong>Kazakhstan Maritime Academy (KMA)</strong></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="mainpage.html" class="row element">
-                <div class="imgbox">
-                    <img src="src/uni/KBTUlogo.jpeg" alt="kbtulogo" class="ulogo img-fluid" width="500" height="500">
-                </div>
-                <div class="col">
-
-                </div>
-            </a>
         </div>
         <div id="Tables">
-          <div>
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                    <th>
-                    
-                        
-                    </th>
-                    <th>
-
-                    </th>
-                    <th>
-
-                    </th>
-                    </tr>
-                </thead>
-              <tbody>
-
-              </tbody>
-            </table>
-          </div>
-          <div>
-
-          </div>
+            <div class="table-scroll">
+              <table class="table">
+                  <thead class="thead-dark">
+                      <tr>
+                          <th id="name" scope="col">
+                              <strong>Name</strong>
+                          </th>
+                          <th id="adress" scope="col">
+                              <strong>Adress</strong>
+                          </th>
+                          <th id="rector" scope="col">    
+                              <strong>Rector</strong>
+                          </th>
+                          <th id="cost" scope="col">
+                              <strong>for Citizens</strong>
+                          </th>
+                          <th scope="col">
+                              <strong>for Foreigners</strong>
+                          </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="table-info">
+                          <td>
+                              <p>SDU</p>
+                          </td>
+                          <td>
+                              <p>Kaskelen, Abilay khan 1/1</p>
+                          </td>
+                          <td>
+                              <p>Davronjon Gaipov</p>
+                          </td>
+                          <td>
+                              <p>~850k tg</p>
+                          </td>
+                          <td>
+                              <p>2500$</p>
+                          </td>
+                      </tr>
+                      <tr class="table-info">
+                          <td>
+                              <p>AITU</p>
+                          </td>
+                          <td>
+                              <p>Nur-Sultan, Turkestan street</p>
+                          </td>
+                          <td>
+                              <p>Ahmed-Zaki Darkhan Zhumakanovich</p>
+                          </td>
+                          <td>
+                              <p>~1600k tg</p>
+                          </td>
+                          <td>
+                              <p>~3700$</p>
+                          </td>
+                      </tr>
+                      <tr class="table-info">
+                          <td>
+                              <p>IITU</p>
+                          </td>
+                          <td>
+                              <p>Almaty, Manasa street</p>
+                          </td>
+                          <td>
+                              <p>Hikmetov Askar Kusupbekovich</p>
+                          </td>
+                          <td>
+                              <p>~1250k tg</p>
+                          </td>
+                          <td>
+                              <p>~3000$</p>
+                          </td>
+                      </tr>
+                      <tr class="table-info">
+                          <td>
+                              <p>KBTU</p>
+                          </td>
+                          <td>
+                              <p>Almaty, Tole Bi steet</p>
+                          </td>
+                          <td>
+                              <p>Gabdullin Maratbek Tulebergenovich</p>
+                          </td>
+                          <td>
+                              <p>~5000$</p>
+                          </td>
+                          <td>
+                              <p>~9000$</p>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+            <div class="table-scroll">
+                <table class="table table-primary">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th id="code">
+                                <p>Code</p>
+                            </th>
+                            <th id="group">
+                                <p>Group of educational programs</p>
+                            </th>
+                            <th id="order">
+                                <p>Gov order</p>
+                            </th>
+                            <th id="application">
+                                <p>Applications submitted</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>B002</p>
+                            </td>
+                            <td>
+                                <p>Preschool education and upbringing</p>
+                            </td>
+                            <td>
+                                <p>1036</p>    
+                            </td>
+                            <td>
+                                <p>115</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>B062</p>
+                            </td>
+                            <td>
+                                <p>Electrical and power engineering</p>
+                            </td>
+                            <td>
+                                <p>2075</p>
+                            </td>
+                            <td>
+                                <p>1533</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>B057</p>
+                            </td>
+                            <td>
+                                <p>Information Technologies</p>
+                            </td>
+                            <td>
+                                <p>3318</p>
+                            </td>
+                            <td>
+                                <p>7257</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-      </div>
-    </div>
+
+        </div>
+        
   </body>
 </html>
